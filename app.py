@@ -7,6 +7,7 @@ from io import StringIO
 from subprocess import check_output
 from urllib.parse import urlparse
 
+import flask
 import pandas
 import requests
 import sklearn
@@ -104,7 +105,8 @@ def build_model():
 
 @app.route('/status', methods=['GET'])
 def is_alive():
-    return '', 200
+    status_code = flask.Response(status=200)
+    return status_code
 
 
 def _get_host(url):
