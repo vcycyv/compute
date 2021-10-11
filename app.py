@@ -56,7 +56,7 @@ def build_model():
     train_table = body['trainTable']
     predictors = body['predictors']
     target = body['target']
-    model_name = body['modelName']
+    model_name = body['name']
     description = body['description']
     function = body['function']
 
